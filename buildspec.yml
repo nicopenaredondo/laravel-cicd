@@ -43,5 +43,7 @@ phases:
       - echo Installing composer deps
       - composer self-update && composer diagnose
       - composer clear-cache
-      - composer update --no-progress --no-suggest
-      - vendor/bin/phpunit
+      - composer install
+  post_build:
+    commands:
+      - phpunit
