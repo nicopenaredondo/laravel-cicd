@@ -46,6 +46,7 @@ phases:
       - echo Build started on `date`
       - echo Installing composer deps
       - composer install --no-progress --no-suggest
+      - php artisan key:generate
 
   post_build:
     commands:
