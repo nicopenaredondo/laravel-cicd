@@ -46,4 +46,4 @@ phases:
       - composer install
   post_build:
     commands:
-      - ./vendor/bin/phpunit
+      - phpunit tests
